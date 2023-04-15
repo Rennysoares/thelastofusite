@@ -1,0 +1,263 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+*{
+    padding: 0px;
+    margin: 0px;
+    color: white;
+    font-family: 'Roboto Slab', serif;
+}
+
+html{
+    scroll-behavior: smooth;
+    scroll-padding-top: 40px;
+}
+
+body{
+    background-color: black;
+}
+
+header{
+    position: relative;
+    height: 500px;
+    background: url('../images/tlof.png') center center no-repeat;
+    background-size: cover;
+    animation: smoothtransitionkey .7s forwards;
+}
+
+header::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: linear-gradient(to top, rgb(0, 0, 0) 0%, rgba(0, 0, 0, 0) 100%);
+}
+
+header p{
+    margin-top: 10px;
+    animation: smoothtransitionkey .7s forwards;
+}
+
+nav{
+    position: fixed;
+    top:0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.355);
+    z-index: 1;
+}
+
+nav ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+nav li{
+    display: inline-block;
+    animation: smoothtransitionkey .7s forwards;
+}
+
+nav li a{
+    font-size: 14px;
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    border-radius: 10px;
+}
+
+nav li a:hover{
+    background-color: rgba(0, 0, 0, 0.664);
+    transform: scale(1.05);
+    transition: 0.6s;
+}
+
+.titulo{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+h1{
+    font-size: 40px;
+    text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.233);
+    animation: smoothtransitionkey .7s forwards;
+}
+
+h2{
+    font-size: 25px;
+    padding-bottom: 15px;
+}
+
+.foto_sinopse:hover{
+    box-shadow: 0px 0px 20px white;
+    transform: scale(1.05);
+    transition: 0.6s;
+}
+
+
+section{
+    animation: smoothtransitionkey .7s forwards;
+}
+
+main .grids{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 30px;
+    padding: 10px 40px;
+    align-items: center;
+    justify-content: center;
+}
+
+.grids p{
+    text-align: justify;
+    text-indent: 40px;
+}
+
+.grids figure{
+    display: block;
+    text-align: center;
+}
+
+.grids img{
+    width: 80%;
+}
+
+@media screen and (max-width: 800px) {
+    main .grids{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        column-gap: 30px;
+        padding: 10px 40px;
+        align-items: center;
+        justify-content: center;
+    }
+
+    h2{
+        font-size: 25px;
+        padding-bottom: 15px;
+        text-align: center;
+    }
+
+    .grids p{
+        text-align: justify;
+        text-indent: 40px;
+    }
+
+    .grids figure{
+        margin-top: 20px;
+        display: block;
+        text-align: center;
+    }
+
+    .grids img{
+        width: 80%;
+    }
+
+}
+
+.conteiner_elenco{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.conteiner_elenco figure{
+    width: 250px;
+    padding: 20px;
+    margin: 10px;
+    background-color: rgb(20, 20, 20);
+    border-radius: 20px;
+}
+.conteiner_elenco figure img{
+    width: 100%;
+}
+
+.conteiner_elenco figure figcaption{
+    margin-top: 20px;
+    text-align: center;
+}
+
+.conteiner_elenco figure:hover{
+    box-shadow: 0px 0px 20px white;
+    transform: scale(1.05);
+    transition: 0.6s;
+}
+
+h3{
+    padding: 10px 20px;
+}
+
+.criticas p{
+    text-align: justify;
+    text-indent: 30px;
+    padding: 0px 20px;
+}
+
+.criticas blockquote{
+    padding: 0px 20px;
+    text-align: justify;
+    text-indent: 30px;
+}
+
+.curiosidades h2{
+    padding: 20px;
+}
+
+.curiosidades li{
+    padding: 0px 20px;
+}
+
+.grid_cite{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 400px);
+    align-items: center;
+    justify-content: center;
+    gap:20px
+}
+
+@keyframes smoothtransitionkey {
+    from{
+        opacity: 0;
+        transform: translate3d(0, -60px, 0);
+    }
+    to{
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+div#boxdev{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+#boxdev>.devs{
+    height: 250px;
+    width: 300px;
+    background-color: rgba(0, 0, 0, 0.100);
+    border-radius: 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+#boxdev>.devs>figure{
+    margin-top: 10px;
+    text-align: center;
+}
+#boxdev>.devs>figure>img{
+    border-radius: 50%;
+    box-shadow: 3px 3px 7px black;
+    width: 70%;
+}
+
+footer{
+    background-color: rgb(0, 5, 57);
+}
